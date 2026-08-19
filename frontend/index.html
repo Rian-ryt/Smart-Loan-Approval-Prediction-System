@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Loan Approval Prediction App</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    /* Finance Background Image */
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* Animated Floating Circles */
+
+body::before,
+body::after{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+}
+
+body::before{
+    background:#8a2be2;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    background:#00c6ff;
+    bottom:-100px;
+    right:-100px;
+}
+
+/* Glass Card */
+
+.container{
+    text-align:center;
+    padding:60px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.3);
+
+    width:800px;
+}
+
+/* Main Title */
+
+h1{
+    font-family:'Orbitron',sans-serif;
+
+    color:white;
+
+    font-size:52px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 10px #00c6ff,
+    0 0 20px #8a2be2;
+}
+
+/* Subtitle */
+
+p{
+    color:#eaeaea;
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+/* Start Button */
+
+button{
+    padding:18px 55px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+    45deg,
+    #00c6ff,
+    #8a2be2
+    );
+
+    transition:0.4s ease;
+
+    box-shadow:
+    0 0 15px rgba(0,198,255,0.7);
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+    0 0 30px rgba(138,43,226,0.9);
+}
+
+/* Small animation */
+
+.container{
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💰 Smart Loan Approval <br> Prediction App 💰</h1>
+
+<p>
+AI-powered loan eligibility prediction system for
+faster and smarter banking decisions.
+</p>
+
+<button onclick="window.location.href='http://127.0.0.1:8501'">
+🚀 Start Prediction
+</button>
+
+</div>
+
+</body>
+</html>
