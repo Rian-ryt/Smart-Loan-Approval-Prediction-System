@@ -5,9 +5,17 @@ from datetime import date
 import plotly.graph_objects as go
 import plotly.express as px
 
+
 # Load model and scaler
-model = pk.load(open('model.pkl', 'rb'))
-scaler = pk.load(open('scaler.pkl', 'rb'))
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
+with open(BASE_DIR / "model.pkl", "rb") as file:
+    model = pk.load(file)
+
+with open(BASE_DIR / "scaler.pkl", "rb") as file:
+    scaler = pk.load(file)
 
 st.set_page_config(page_title="Loan Prediction", page_icon="🏦", layout="centered")
 st.markdown("""
